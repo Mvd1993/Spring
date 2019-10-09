@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 		if (userName.equals("natalia@gmail.com")&&userPass.equals("1234")) {
 			
 			out.print("Welcome, " + userName);
-			                   request.getRequestDispatcher("index.html").include(request, response);
+			                   request.getRequestDispatcher("indexlogged.html").include(request, response);
 			HttpSession session = request.getSession();
 			session.setAttribute("name", userName);
 			
