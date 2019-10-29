@@ -1,4 +1,5 @@
-package serveletH2;
+package Pharmacy;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;

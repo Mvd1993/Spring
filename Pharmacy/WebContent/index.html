@@ -30,26 +30,31 @@
 </style> 
 <body>  
   
-Add New Employee
+Add New Medicament
 <form action="SaveServlet" method="post">  
 <table id="customers">  
+<tr><td>ID:</td><td><input type="text" name="medicamentID"/></td></tr>  
 <tr><td>Name:</td><td><input type="text" name="name"/></td></tr>  
-<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>  
-<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>  
-<tr><td>Country:</td><td>  
-<select name="country" style="width:150px">  
-<option>GERMANY</option>  
-<option>USA</option>  
-<option>UK</option>  
-<option>CANADA</option>  
+<tr><td>Description:</td><td><input type="text" name="description"/></td></tr>  
+<tr><td>Producer:</td><td><input type="text" name="producer"/></td></tr>
+<tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
+<tr><td>Price:</td><td><input type="text" name="price"/></td></tr>
+<tr><td>Stock:</td><td><input type="text" name="stock_Quantity"/></td></tr>
+<tr><td>Stock In Order:</td><td><input type="text" name="stock_In_Order"/></td></tr>     
+
+
+<tr><td>Active:</td><td>  
+<select name="active" style="width:150px">  
+<option>TRUE</option>  
+<option>FALSE</option>    
 </select>  
 </td></tr>  
-<tr><td colspan="2"><input type="submit" value="Save Employee"/></td></tr>  
+<tr><td colspan="2"><input type="submit" value="Save Medicament"/></td></tr>  
 </table>  
 </form>  
   
 <br/>  
-<a href="ViewServlet">view employees</a>  
+<a href="ViewServlet">view medicament</a>  
   
 </body>  
 </html>

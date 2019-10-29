@@ -1,4 +1,5 @@
-package serveletH2;
+package Pharmacy;
+
 import java.io.IOException;  
 import javax.servlet.ServletException;  
 import javax.servlet.annotation.WebServlet;  
@@ -16,7 +17,7 @@ public class DeleteServlet extends HttpServlet {
         int id = Integer.parseInt(sid);
         
         
-        EmployeeDao.delete(id);  
+        MedicamentDao.delete(id);  
         response.sendRedirect("ViewServlet"); 
         
         

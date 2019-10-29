@@ -1,4 +1,4 @@
-package serveletH2;
+package Pharmacy;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,17 +18,22 @@ public class ViewServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		out.println("Employees List");
+		out.println("Medicaments List");
 
-		List<Employee> list = EmployeeDao.getAllEmployees();
+		List<Medicament> list = MedicamentDao.getAllMedicaments();
 
-		out.print("<table id='customers'");
+		out.print("<table id='medicaments'");
 		out.print("<br><br>");
 		out.print(
 				"<tr><th>Id</th><th>Name</th><th>Password</th><th>Email</th><th>Country</th><th>Edit</th><th>Delete</th></tr>");
 
-		for (Employee employee : list) {
-			out.print("<tr><td>" + employee.getId() + "</td><td>" + employee.getName() + "</td><td>"+ employee.getPassword() + "</td><td>" + employee.getEmail() + "</td><td>" + employee.getCountry()+ "</td><td><a href='EditServlet?id=" + employee.getId()+ "'>edit</a></td> <td><a href='DeleteServlet?id=" + employee.getId() + "'>delete</a></td></tr>");
+		for (Medicament medicament : list) {
+			out.print("<tr><td>" + medicament.getMedicamentId() + "</td><td>" + medicament.getName() 
+			+ "</td><td>"+ medicament.getDescription() + "</td><td>" + medicament.getProducer() + "</td><td>" 
+					+ medicament.getCategory()+"</td><td>"+ medicament.getPrice()+"</td><td>"+medicament.getStockQuantity()
+					+"</td><td>"+medicament.getStockInOrder()+"</td><td>"+medicament.getActive()
+					+ "</td><td><a href='EditServlet?id=" + medicament.getMedicamentId()
+					+ "'>edit</a></td> <td><a href='DeleteServlet?id=" + medicament.getMedicamentId() + "'>delete</a></td></tr>");
 
 		}
 		out.print("</table>");
